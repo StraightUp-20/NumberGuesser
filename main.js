@@ -10,8 +10,9 @@ button.addEventListener('click', (e) => {
   if (input.value == '') {
     alert("Please enter a number");
   }
-    else if (input.value >= 0 || input.value <= 10) {
+    else if (input.value < 0 || input.value > 10) {
       alert("Enter number within the parameters");
+      input.value = '';
     } else {
       randomNumGen();
   }
